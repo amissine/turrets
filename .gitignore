@@ -1,10 +1,11 @@
-/target
-/dist
-**/*.rs.bk
-Cargo.lock
-bin/
-pkg/
-wasm-pack.log
-worker/
-node_modules/
-.cargo-ok
+.DS_Store
+node_modules
+dist
+
+package-lock.json
+
+TURRET*
+.env
+# Vim
+.*.sw?
+*.vim

@@ -1,3 +1,9 @@
+Source:
+
+``` sh
+git clone https://github.com/cloudflare/modules-rollup-esm.git
+```
+
 # 👷 Modules Wrangler template
 
 ## NOTE: You must be using wrangler 1.16 or newer to use this template

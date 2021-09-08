@@ -1,15 +1,17 @@
 {
   "private": true,
-  "name": "{{ project-name }}",
+  "name": "turrets",
   "version": "1.0.0",
-  "description": "A template for kick starting a Cloudflare Workers project",
+  "description": "Configurable Cloudflare Workers, sharing the same module",
   "module": "./dist/index.mjs",
   "scripts": {
     "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write '**/*.{js,css,json,md}'"
+    "test": "echo 'Error: no test specified' && exit 1",
+    "format": "prettier --write '**/*.{js,css,json,md}'",
+    "preinit": "[ \"${CI}\" = true ] && npx envdist -e || npx envdist",
+    "init": "./init.sh"
   },
-  "license": "MIT OR Apache-2.0",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.1.0",

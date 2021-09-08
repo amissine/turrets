@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "{{ name }}",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker {{ name }} configuration",
+  "env": {"path":"..","dist":".env.turret.dist"},
+  "scripts": {
+    "preinit": "[ \"${CI}\" = true ] && npx envdist -e || npx envdist",
+    "init": "./init.sh"
+  },
+  "license": "Apache-2.0"
+}

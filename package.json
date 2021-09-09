@@ -8,7 +8,7 @@
     "build": "rollup -c",
     "test": "echo 'Error: no test specified' && exit 1",
     "format": "prettier --write '**/*.{js,css,json,md}'",
-    "preinit": "[ \"${CI}\" = true ] && npx envdist -e || npx envdist",
+    "preinit": "npx envdist",
     "init": "./init.sh"
   },
   "license": "Apache-2.0",

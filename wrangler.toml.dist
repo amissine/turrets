@@ -3,21 +3,11 @@ type = "javascript"
 account_id = "${CFW_ACCOUNT_ID}"
 workers_dev = true
 kv_namespaces = [
-   { binding = "META", id = "${CFW_META}" },
-   { binding = "TX_FUNCTIONS", id = "${CFW_TX_FUNCTIONS}" },
-   { binding = "TX_FEES", id = "${CFW_TX_FEES}" },
+   { binding = "META", id = "${META}", preview_id = "${META}" },
+   { binding = "TX_FUNCTIONS", id = "${TX_FUNCTIONS}", preview_id = "${TX_FUNCTIONS}" },
+   { binding = "TX_FEES", id = "${TX_FEES}", preview_id = "${TX_FEES}" },
 ]
-vars = { # {{{1
-  STELLAR_NETWORK = "${STELLAR_NETWORK}", 
-  HORIZON_URL = "${HORIZON_URL}", 
-  TURRET_ADDRESS = "${TURRET_ADDRESS}", 
-  TURRET_RUN_URL = "${TURRET_FUNCTION_RUNNER_URL}", 
-  TX_FUNCTION_FEE_DAYS_TTL = ${CFW_TX_FUNCTION_FEE_DAYS_TTL}, 
-  XLM_FEE_MIN = ${CFW_XLM_FEE_MIN}, 
-  XLM_FEE_MAX = ${CFW_XLM_FEE_MAX}, 
-  UPLOAD_DIVISOR = ${CFW_UPLOAD_DIVISOR}, 
-  RUN_DIVISOR = ${CFW_RUN_DIVISOR} 
-} # }}}1
+vars = { STELLAR_NETWORK = "${STELLAR_NETWORK}", HORIZON_URL = "${HORIZON_URL}", TURRET_ADDRESS = "${TURRET_ADDRESS}", TX_FUNCTION_RUN_URL = "${TX_FUNCTION_RUN_URL}", TURRET_FEE_DAYS_BR = ${TURRET_FEE_DAYS_BR}, XLM_FEE_MIN = ${XLM_FEE_MIN}, XLM_FEE_MAX = ${XLM_FEE_MAX}, UPLOAD_DIVISOR = ${UPLOAD_DIVISOR}, RUN_DIVISOR = ${RUN_DIVISOR} }
 
 [build]
 command = "npm i && npm run build"

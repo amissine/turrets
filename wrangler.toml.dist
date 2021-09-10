@@ -13,7 +13,7 @@ vars = { STELLAR_NETWORK = "${STELLAR_NETWORK}", HORIZON_URL = "${HORIZON_URL}",
 command = "npm i && npm run build"
 [build.upload]
 format = "modules"
-main = "../dist/index.mjs"
+main = "./index.mjs"
 [[build.upload.rules]]
 type = "Text"
 globs = ["**/*.txt"]

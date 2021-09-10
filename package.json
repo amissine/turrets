@@ -6,6 +6,8 @@
   "module": "./dist/index.mjs",
   "scripts": {
     "build": "rollup -c",
+    "deploy": "wrangler publish",
+    "dall": "./deploy-all.sh",
     "test": "echo 'Error: no test specified' && exit 1",
     "format": "prettier --write '**/*.{js,css,json,md}'",
     "preinit": "npx envdist",

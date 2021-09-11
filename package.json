@@ -8,12 +8,18 @@
     "build": "rollup -c",
     "dev": "./dev-all.sh",
     "deploy": "./deploy-all.sh",
-    "pretest": "npm run build",
-    "test": "echo 'Error: no test specified' && exit 1",
+    "pretest": "npm i && npm run build",
+    "test": "node test/initial.test.js",
     "preinit": "npx envdist",
     "init": "./init.sh"
   },
   "license": "Apache-2.0",
+  "dependencies": {
+    "bignumber.js": "^4.1.0",
+    "moment": "^2.29.1",
+    "node-fetch": "^3.0.0",
+    "stellar-sdk": "^8.2.4"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.1.0",

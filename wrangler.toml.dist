@@ -10,7 +10,7 @@ kv_namespaces = [
 vars = { STELLAR_NETWORK = "${STELLAR_NETWORK}", HORIZON_URL = "${HORIZON_URL}", TURRET_ADDRESS = "${TURRET_ADDRESS}", TX_FUNCTION_RUN_URL = "${TX_FUNCTION_RUN_URL}", TURRET_FEE_DAYS_BR = ${TURRET_FEE_DAYS_BR}, XLM_FEE_MIN = ${XLM_FEE_MIN}, XLM_FEE_MAX = ${XLM_FEE_MAX}, UPLOAD_DIVISOR = ${UPLOAD_DIVISOR}, RUN_DIVISOR = ${RUN_DIVISOR} }
 
 [build]
-command = "npm i && npm run build"
+command = "[ -L dist ] || ln -s ../dist dist"
 [build.upload]
 format = "modules"
 main = "./index.mjs"

@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
+npm i && npm run build
 for d in TURRET_*; do
-  cp $d/wrangler.toml .
-  npm i && npm run deploy
-  rm wrangler.toml
+  cd $d
+  wrangler publish
+  cd -
 done

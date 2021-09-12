@@ -7,7 +7,7 @@ export default {
     } catch (e) {
       return new Response(e.message)
     }
-  },
+  }
 }
 
 async function handleRequest(request, env) {

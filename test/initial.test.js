@@ -1,5 +1,8 @@
 //const fetch = require('node-fetch') - v3 is an ESM-only module, no require// {{{1
+const StellarSdk = require('stellar-sdk')
 const log = console.log
+
+log(StellarSdk.BASE_FEE)
 
 const fetch = // {{{1
   (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args))
